@@ -1,10 +1,9 @@
-// src/components/chart.tsx
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartData } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const Chart = ({ data }: { data: any }) => {
+const Chart = ({ data }: { data: ChartData<'bar'> }) => {
   return (
     <div className="mb-8">
       <Bar
@@ -21,3 +20,4 @@ const Chart = ({ data }: { data: any }) => {
 };
 
 export default Chart;
+
